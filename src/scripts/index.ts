@@ -3,9 +3,13 @@ import "../styles/styles.css";
 
 import { Compatibility } from "./compatibility";
 
+type IntervalId = ReturnType<typeof setInterval>;
+
 class App {
     static name1Element = document.querySelector("input[name='your-name']") as HTMLInputElement;
     static name2Element = document.querySelector("input[name='their-name']") as HTMLInputElement;
+
+    static animationResult: IntervalId;
 
     static init() {
         const checkCompatibilityButton = document.querySelector("button") as HTMLButtonElement;
@@ -25,11 +29,14 @@ class App {
         const individualNumberAnimationTime = totalAnimationTime / result;
         let currentNumber = 0;
 
-        const animation = setInterval(() => {
+        if (App.animationResult) {
+            clearInterval(App.animationResult);
+        }
+        App.animationResult = setInterval(() => {
             resultElement.textContent = currentNumber + "%";
             currentNumber++;
             if (currentNumber === result) {
-                clearInterval(animation);
+                clearInterval(App.animationResult);
             }
         }, individualNumberAnimationTime);
     }
