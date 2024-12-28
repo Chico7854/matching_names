@@ -1,4 +1,8 @@
 body {
+    font-family: "Parkinsans";
+    color: white;
+    font-size: 2vh;
+    
     height: 100vh;
 
     background-color: rgb(252, 168, 182);
@@ -8,7 +12,27 @@ body {
     align-items: center;
 }
 
+header {
+    flex: 1;
+
+    font-size: 5rem;
+
+    display: flex;
+    align-items: center;
+}
+
+#result {
+    flex: 1;
+
+    font-size: 3rem;
+
+    display: flex;
+    align-items: center;
+}
+
 #input-names {
+    flex: 3;
+
     display: flex;
 }
 
@@ -29,4 +53,8 @@ body {
 
 #input-names input:focus {
     outline: none;
+}
+
+div:last-of-type {
+    flex: 3;
 }

@@ -24,12 +24,17 @@ module.exports = {
             {
                 test: /\.css$/i,
                 use: ["style-loader", "css-loader"],
+                include: [path.resolve(__dirname, "src", "styles")],
             },
             {
                 test: /\.ts$/,
                 use: "ts-loader",
-                include: [path.resolve(__dirname, "src, scripts")],
+                // include: [path.resolve(__dirname, "src", "scripts")],
+                exclude: /node_modules/,
             },
         ],
     },
+    resolve: {
+        extensions: ['.ts', '.js'] // Make sure TypeScript files are resolved
+      },
 };
