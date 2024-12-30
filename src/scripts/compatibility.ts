@@ -16,12 +16,12 @@ export class Compatibility {
 
     checkPerfectCouple(): boolean {
         let isPerfectCouple = false;
-        if (this.name1 === "nicolly") {
+        if (this.name1 === "nicolly" || this.name1 === "nic") {
             if (this.name2 === "lucas") {
                 isPerfectCouple = true;
             }
         }
-        if (this.name2 === "nicolly") {
+        if (this.name2 === "nicolly" || this.name1 === "nic") {
             if (this.name1 === "lucas") {
                 isPerfectCouple = true;
             }
