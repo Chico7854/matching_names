@@ -21,7 +21,7 @@ export class Compatibility {
                 isPerfectCouple = true;
             }
         }
-        if (this.name2 === "nicolly" || this.name1 === "nic") {
+        if (this.name2 === "nicolly" || this.name2 === "nic") {
             if (this.name1 === "lucas") {
                 isPerfectCouple = true;
             }
